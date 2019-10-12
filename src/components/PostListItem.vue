@@ -1,6 +1,6 @@
 <template>
   <div class="post">
-{{Object.keys(user.posts).lenght}}
+    {{Object.keys(user.posts).lenght}}
     <div class="user-info">
       <a
         href="#"
@@ -25,7 +25,7 @@
     </div>
 
     <div class="post-date text-faded">
-      {{post.publishedAt}}
+      <AppDate :timestamp="post.publishedAt" />
     </div>
 
   </div>
@@ -33,6 +33,7 @@
 
 <script>
 import sourceData from '@/data'
+
 export default {
   props: {
     post: {
